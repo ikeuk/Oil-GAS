@@ -1,0 +1,77 @@
+ <!DOCTYPE html> 
+<html>
+
+<head>
+    <title>TPE | Oil & Gas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Smelter a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="/css/contact.css" rel='stylesheet' type='text/css' />
+    <link href="/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="/css/fontawesome-all.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800" rel="stylesheet">
+</head>
+<body>
+ 
+ <div class="banner-inner">
+    </div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/dashboard">Dashboard</a>
+        </li>
+          <li class="breadcrumb-item active">
+              <a href="/dashboard">Add Current Projects</a>
+        </li>
+         <li class="breadcrumb-item active">
+              <a href="/addpreviouse">Add Previouse Projects</a>
+        </li>
+         <li class="breadcrumb-item active">
+              <a href="/addfleets">Add Our Fleets</a>
+        </li>
+         <li class="breadcrumb-item active">
+              <a href="/addmissions">Add Our Missions</a>
+        </li>
+         <li class="breadcrumb-item">
+            <a href="/auth/logout">Logout</a>
+        </li>
+    </ol>
+     <section class="services">
+        <div class="container">
+           <h3 class="tittle">Admin Content Managment Page(CMS)</h3>
+                    <h3 class="tittle">Previouse Projects Page</h3>
+             {{#if msg}}
+                     <div class="alert alert-success" role="alert">
+						<strong>Well done!</strong> {{msg}}
+				   </div>
+                 {{else}}
+					 {{msg}}
+                    {{/if}}
+         
+            <div class="row inner-sec-wthree">
+                <div class="contact_grid_right">
+                    <form action="/uploadPreviouse" method="POST" enctype='multipart/form-data'>
+                        <div class="contact_left_grid">
+                            <input type="text" name="title" placeholder="Title" required="">
+                              <textarea name="description" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+                           <input type='file' name='myImage' />
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Clear">
+                            <div class="clearfix"> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

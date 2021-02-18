@@ -1,0 +1,45 @@
+  <!--//header-->
+    <div class="banner-inner">
+    </div>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Projects</li>
+    </ol>
+    <!--//banner-->
+   {{#if list }}
+    	<!--/Projets-->
+	<section class="services">
+		<div class="container">
+			<h3 class="tittle">Our Previouse Projects</h3>
+			<div class="row inner-sec-wthree">
+   {{#each list}}
+				<div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                   
+					<div class="section_1_gallery_grid">
+						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." >
+							
+                            <div class="section_1_gallery_grid1">
+								<img src="./uploads/{{imagename}}" alt=" " class="img-responsive" />
+								<div class="proj_gallery_grid1_pos">
+									<h3>{{title}}</h3>
+									<p>{{description}}</p>
+								</div>
+							</div>
+                          {{!-- href="./uploads/{{imagename}}" --}}
+						</a>
+					</div>
+					 
+				</div>
+    {{/each}}
+
+	
+			</div>
+		</div>
+	</section>
+     {{/if}}
+    <!--//projects-->
+
+
+	
